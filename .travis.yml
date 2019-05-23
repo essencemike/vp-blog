@@ -26,7 +26,6 @@ script:
 
 after_success:
   - cd ./docs/.vuepress/dist
-  - echo 'www.gepanfamily.com' > CNAME
   - git config user.name "IMike"
   - git config user.email "gzxessence@163.com"
   - git init
