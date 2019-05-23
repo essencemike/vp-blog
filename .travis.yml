@@ -1,14 +1,15 @@
 language: node_js
 
-sudo: false
-
-node_js:
-  - "10"
+node_js: stable
 
 cache:
   yarn: true
   directories:
     - node_modules
+
+env:
+  global:
+    - GH_REF: github.com/essencemike/vp-blog.git
 
 branches:
   only:
@@ -16,12 +17,16 @@ branches:
 
 before_install:
   - export TZ=Asia/Shanghai
+  - rm -rf docs/.vuepress/dist
 
 script:
   - yarn run build
 
 after_success:
   - cd docs/.vuepress/dist
+  - git init
+  - git config user.name "IMike"
+  - git config user.email "gzxessence@163.com"
   - git add -A
   - git commit -m "deploy at `date +\"%Y-%m-%d %H:%M:%S\"`"
-  - git push --force --quiet "git@github.com:essencemike/vp-blog.git" master:gh-pages
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
