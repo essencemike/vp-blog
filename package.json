@@ -1,0 +1,23 @@
+{
+  "name": "vp-blog",
+  "version": "1.0.0",
+  "description": "个人博客，记录自己的学习过程",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "js",
+    "vue",
+    "node",
+    "react",
+    "electorn"
+  ],
+  "author": "IMike",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^0.14.11"
+  }
+}
