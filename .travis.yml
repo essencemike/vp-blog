@@ -17,6 +17,8 @@ branches:
 
 before_install:
   - export TZ=Asia/Shanghai
+
+before_script:
   - rm -rf docs/.vuepress/dist
 
 script:

@@ -1,13 +1,5 @@
-# Hello VuePress!
-
-<h3 style="text-align: center;">
-还支持 html 片段
-</h3>
+# 宝贝， 我爱你
 
 ```js
-class App {
-  constructor(name) {
-    this.name
-  }
-}
+// 你和小宝宝在干什么啊
 ```
